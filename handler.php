@@ -8,22 +8,22 @@ require 'php/PHPMailer-5.2.28/src/PHPMailer.php';
 require 'php/PHPMailer-5.2.28/src/SMTP.php';
 
 $mail = new PHPMailer(true);
-$mail_to_email = '***@gmail.com'; // your email
-$mail_to_name = 'Webmaster';
+$mail_to_email = 'info@gdgbasra.dev'; // your email
+$mail_to_name = 'Moey';
 
 try {
 
-	$mail_from_name = isset( $_POST['name'] ) ? $_POST['name'] : '';
-	$mail_from_email = isset( $_POST['email'] ) ? $_POST['email'] : '';
-	$mail_message = isset( $_POST['message'] ) ? $_POST['message'] : '';
+	$mail_from_name = isset($_POST['name']) ? $_POST['name'] : '';
+	$mail_from_email = isset($_POST['email']) ? $_POST['email'] : '';
+	$mail_message = isset($_POST['message']) ? $_POST['message'] : '';
 
 
 	// Server settings
 	$mail->isSMTP(); // Send using SMTP
-	$mail->Host = 'smtp.***.com'; // Set the SMTP server to send through
+	$mail->Host = 'mail.gdgbasra.dev'; // Set the SMTP server to send through
 	$mail->SMTPAuth = true; // Enable SMTP authentication
-	$mail->Username = '***'; // SMTP username
-	$mail->Password = '***'; // SMTP password
+	$mail->Username = 'info@gdgbasra.dev'; // SMTP username
+	$mail->Password = '$_0%iZSASS#*'; // SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 	$mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -46,9 +46,7 @@ try {
 	$mail->Send();
 
 	echo 'Message has been sent';
-
 } catch (Exception $e) {
 
 	echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-
 }
