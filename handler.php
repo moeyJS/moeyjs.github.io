@@ -25,7 +25,7 @@ try {
 	$mail->Username = 'info@gdgbasra.dev'; // SMTP username
 	$mail->Password = '$_0%iZSASS#*'; // SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-	$mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+	$mail->Port = 993; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
 	$mail->setFrom($mail_to_email, $mail_to_name); // Your email
 	$mail->addAddress($mail_from_email, $mail_from_name); // Add a recipient
